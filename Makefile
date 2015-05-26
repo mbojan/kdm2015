@@ -4,4 +4,4 @@ files=kdm2015
 default: $(files:=.html)
 
 %.html: %.md
-	pandoc -s -t slidy $< -o $@
+	Rscript -e 'rmarkdown::render("$<")'
